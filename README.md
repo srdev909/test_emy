@@ -13,7 +13,9 @@ npm install
 npm run dev
 ```
 
-The dev server starts on http://localhost:5173.
+The dev server starts on http://127.0.0.1:5173 (also reachable as `http://localhost:5173`).
+
+> The Vite server is explicitly bound to `127.0.0.1` in `vite.config.ts` to avoid the IPv4/IPv6 `localhost` resolution mismatch that can occur on Windows (Vite would otherwise bind only to `[::1]`, causing `ERR_CONNECTION_REFUSED` in browsers that resolve `localhost` to `127.0.0.1`).
 
 Other scripts:
 
